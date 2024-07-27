@@ -7,7 +7,8 @@ import Servicios from './pages/Servicios';
 import Seguros from './pages/Seguros';
 import Companias from './pages/Companias';
 import Contacto from './pages/Contacto';
-import Politicas from './pages/Politicas'; // Ensure this component exists
+import Politicas from './pages/Politicas';
+import Terminos from './pages/Terminos' // Ensure this component exists
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
         <Route path="/seguros" element={<Seguros />} />
         <Route path="/companias" element={<Companias />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/politicas" element={<Politicas />} /> {/* Ensure this component exists */}
+        <Route path="/politicas" element={<Politicas />} /> 
+        <Route path="/terminos" element={<Terminos />} /> 
         <Route path="/" element={<Broker />} />
       </Routes>
       <Footer />
