@@ -1,0 +1,916 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+/* Contenedor principal del encabezado */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f8f9fa; /* Ajusta el color de fondo según sea necesario */
+}
+
+/* Contenedor del logo y del menú */
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+/* Contenedor del logo */
+.logo-container {
+    flex: 1;
+}
+
+/* Contenedor del menú de navegación */
+.nav-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Estilo para el menú desplegable completo */
+.dropdown-menu {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+/* Estilo para los elementos del menú desplegable */
+.dropdown-item {
+    color: black;
+    font-size: 0.9rem;
+}
+
+/* Estilo para el elemento del menú desplegable al pasar el cursor */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+/* Estilo para los submenús */
+.dropdown-submenu .dropdown-menu {
+    background-color: white;
+    border-left: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+/* Flecha del dropdown que indica sub-opciones */
+.dropdown-submenu .dropdown-toggle::after {
+    font-size: 0.8rem;
+    color: black;
+    margin-left: 0.5rem;
+}
+
+/* Mostrar submenús */
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: 0;
+}
+
+/* Estilo general para el botón del menú desplegable */
+.navbar-toggler {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+/* Ajusta el color de la flecha en el botón del menú */
+.navbar-toggler-icon {
+    color: black;
+}
+
+/* Ensure submenus display correctly */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+/* Color del texto de los enlaces de navegación a negro */
+.navbar-nav .nav-link {
+    color: black;
+    position: relative;
+}
+
+/* Efecto de línea roja al pasar el cursor */
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #5c2434;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: black;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: black;
+}
+
+/* Aumenta el espaciado entre los elementos de navegación */
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 20px;
+}
+/* General styles for the responsive menu */
+@media (max-width: 768px) {
+    
+    .nav-container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: flex; /* Ensures that the dropdown menu is positioned correctly */
+    }
+
+    .navbar-toggler {
+        
+        border: none;
+        background: none;
+        z-index: 1001; /* Ensure the button is above the menu */
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml,...'); /* Replace with your hamburger icon */
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-collapse {
+        display: none; /* Hide menu by default */
+        position: absolute;
+        top: 68px; /* Adjust according to the height of your header */
+        left: 0;
+        width: 100vw; /* Full width of the viewport */
+        background-color: #5c2434;
+        z-index: 1000; /* Ensure it overlays other content */
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start (left) */
+        padding: 0; /* Remove any default padding */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0; /* Remove any default margin */
+        padding: 0; /* Remove any default padding */
+    }
+
+    .nav-link {
+        color: #fff;
+        padding: 15px;
+        text-align: left; /* Align text to the left */
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid #4a1b2a; /* Optional: Adds a border between menu items */
+    }
+
+    .nav-link:hover {
+        background-color: #4a1b2a; /* Hover effect */
+        text-decoration: none;
+    }
+
+    .dropdown-menu {
+        background-color: #5c2434;
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #fff;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #4a1b2a;
+    }
+}
+
+/* Adjust logo position on small screens */
+@media (max-width: 576px) {
+    .logo-header {
+        width: 160px; /* Adjust the size as needed */
+        margin-left: -12px; /* Adjust to move logo slightly to the left */
+    }
+
+    .navbar-toggler-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+
+/* Estilos generales */
+.background {
+    background: url('../assets/img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+}
+
+
+/* Estilo general para la barra del breadcrumb */
+.breadcrumb {
+    font-family: "Poppins", sans-serif;
+    font-weight: 350;
+    margin-top: 10px;
+    background-color: white;
+    /* Fondo blanco para la barra del breadcrumb */
+    font-size: 0.2rem;
+    /* Tamaño de fuente más pequeño (ajusta según sea necesario) */
+}
+
+/* Estilo para los elementos del breadcrumb */
+.breadcrumb .breadcrumb-item {
+    color: gray;
+    /* Color gris para el texto de los elementos del breadcrumb */
+    font-size: inherit;
+    /* Asegura que los elementos hereden el tamaño de fuente del contenedor */
+}
+
+/* Estilo para el elemento activo del breadcrumb */
+.breadcrumb .breadcrumb-item.active {
+    color: white;
+    /* Color blanco para el texto del elemento activo */
+}
+
+/* Estilo para los enlaces dentro del breadcrumb */
+.breadcrumb .breadcrumb-item a {
+    color: gray;
+    /* Color gris para el enlace */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+    color: black;
+    /* Color negro para el enlace al pasar el cursor sobre él */
+}
+
+
+.history-section {
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+    margin-top: -120px;
+    z-index: 0;
+    position: relative;
+}
+
+.history-title {
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.history-subtitle {
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    margin: 20px;
+    height: auto; /* Asegura que el contenedor ajuste su altura al contenido */
+    text-align: center; /* Opcional, asegura que el texto esté centrado dentro de su contenedor si hay varias líneas */
+    font-size: 15px;
+}
+
+
+.card-history {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    position: relative; /* Establece un contexto de posicionamiento para el título */
+}
+
+.card-history-title {
+    position: absolute; /* Cambia de relative a absolute */
+    top: 10px; /* Ajusta la posición superior para estar un poco más abajo */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para centrar correctamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.card {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 254px;
+    background: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: all ease-in-out 0.3s;
+}
+
+.card:hover {
+    background-color: #fdfdfd;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .background {
+        height: 40vh;
+        /* Ajusta la altura para pantallas más pequeñas */
+    }
+
+    .history-section {
+        margin-top: -20px;
+        /* Ajusta según sea necesario */
+        padding: 15px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+
+    .history-title {
+        font-size: 1.5rem;
+        /* Tamaño de fuente más pequeño */
+        padding: 8px 16px;
+    }
+
+    .history-subtitle {
+        margin: 15px;
+        /* Ajusta el margen */
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-history {
+        flex-direction: column;
+        /* Cambia la dirección de los elementos en pantallas pequeñas */
+        gap: 15px;
+        /* Ajusta el espacio entre los elementos */
+        align-items: center;
+    }
+
+    .card {
+        padding: 15px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .history-title {
+        font-size: 1.2rem;
+        /* Tamaño de fuente aún más pequeño */
+        padding: 6px 12px;
+    }
+
+    .history-subtitle {
+        margin: 10px;
+        /* Ajusta el margen */
+    }
+
+    .card {
+        padding: 10px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
+
+/* Estilos básicos para .card */
+.card {
+    width: 190px;
+    height: 254px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para la información dentro de la tarjeta */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Imagen de la tarjeta */
+.card-avatar {
+    --size: 60px;
+    background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: transform .2s ease;
+    margin-bottom: 1rem;
+}
+
+.card-social {
+    display: flex;
+    justify-content: space-between; /* Distribuye los ítems con espacio entre ellos */
+    width: 40%;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.card-social__item {
+    list-style: none;
+    display: flex; /* Asegura que el SVG se alinee correctamente dentro de su contenedor */
+}
+
+.card-social__item svg {
+    height: 18px;
+    width: 18px;
+    fill: #515F65;
+    cursor: pointer;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+
+/* Texto de la tarjeta */
+.card-title {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.card-subtitle {
+    color: #859ba8;
+    font-size: 0.8em;
+}
+
+/* Efectos de hover */
+.card:hover {
+    box-shadow: 0 8px 50px #23232333;
+}
+
+.card:hover .card-info {
+    transform: translateY(-5%);
+}
+
+.card:hover .card-social {
+    opacity: 1;
+}
+
+.card-social__item svg:hover {
+    fill: #232323;
+    transform: scale(1.1);
+}
+
+.card-avatar:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos básicos para .personas */
+.personas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* Centra las tarjetas en la línea */
+    align-items: center;
+    /* Alinea las tarjetas verticalmente en el centro */
+}
+
+/* Media Queries */
+
+/* Pantallas grandes (de escritorio) */
+@media (min-width: 1024px) {
+    .personas {
+        justify-content: space-around;
+        /* Distribuye las tarjetas con más espacio en pantallas grandes */
+    }
+}
+
+/* Pantallas medianas (tablets en modo horizontal) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .card {
+        width: 150px;
+        /* Reduce el ancho de las tarjetas */
+        height: 200px;
+        /* Reduce la altura de las tarjetas */
+    }
+}
+
+/* Pantallas pequeñas (tabletas en modo vertical y móviles) */
+@media (max-width: 768px) {
+    .personas {
+        flex-direction: column;
+        /* Cambia la dirección de las tarjetas a columna */
+        align-items: center;
+        /* Alinea las tarjetas al centro */
+        gap: 15px;
+        /* Reduce el espacio entre las tarjetas */
+    }
+
+    .card {
+        width: 100%;
+        /* Las tarjetas ocupan todo el ancho disponible */
+        max-width: 300px;
+        /* Ancho máximo de las tarjetas */
+        height: auto;
+        /* Ajusta la altura automáticamente */
+    }
+}
+
+hr{
+    margin-bottom: 10vh !important;
+    margin-top: 10vh !important;
+}
+
+.contenedor-main{
+    width: 100%;
+    height: 100%;
+    /* Add your background pattern here */
+    background-color: #ffffff;
+    background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+}
+
+  
+  .Btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    /* overflow: hidden; */
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+  }
+  
+  .BG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #075e54;
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  
+  .Btn:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+  }
+  
+  .Btn:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+    backdrop-filter: blur(4px);
+  }
+  
+  
+  .whatsapp {
+    position: fixed; /* Fija el botón en la misma posición en la ventana de visualización */
+    bottom: 20px; /* Distancia desde la parte inferior de la ventana */
+    right: 20px; /* Distancia desde el lado derecho de la ventana */
+    z-index: 999; /* Asegura que el botón esté por encima de otros elementos */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente si es necesario */
+    justify-content: center; /* Centra el contenido horizontalmente si es necesario */
+}
+
+/* Estilos generales */
+.servicios {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
+
+.servicios-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+}
+
+.servicios-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #5c2434;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.text-body {
+    color: rgb(134, 134, 134);
+}
+
+.text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.servicios:hover {
+    border-color: #5c2434;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.servicios:hover .servicios-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+}
+
+.seguros {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+}
+
+/* Responsivo: dos columnas en dispositivos móviles */
+@media (max-width: 768px) {
+    .seguros {
+        gap: 20px; /* Espacio entre tarjetas en móviles */
+    }
+    .servicios {
+        width: calc(50% - 10px); /* Dos columnas en móviles */
+    }
+}
+
+/* Responsivo: una columna en pantallas más pequeñas */
+@media (max-width: 480px) {
+    .servicios {
+        width: calc(100% - 10px); /* Una columna en pantallas pequeñas */
+    }
+}
+
+
+/* Estilos generales para los patrocinadores */
+.sponsor {
+    display: flex;
+    justify-content: center; /* Centra los logos horizontalmente */
+    flex-wrap: wrap; /* Permite el ajuste de los logos si hay espacio limitado */
+    gap: 10px; /* Espaciado entre los logos */
+    margin: 20px 0; /* Margen superior e inferior opcional */
+    background-color: #ffffff;
+}
+
+.sponsor-logo {
+    width: 100px; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: contain; /* Mantiene la proporción sin deformar */
+    opacity: 0.5; /* Color gris mediante opacidad */
+    transition: opacity 0.3s ease; /* Transición suave para cambios de opacidad */
+}
+
+.sponsor-logo:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el ratón sobre el logo */
+}
+
+/* Responsivo: Ajustes para dispositivos móviles y pantallas pequeñas */
+@media (max-width: 768px) {
+    .sponsor-logo {
+        width: 80px; /* Reduce el ancho del logo en pantallas más pequeñas */
+    }
+}
+
+/* Responsivo: Ajustes para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    .sponsor-logo {
+        width: 60px; /* Reduce aún más el ancho del logo en pantallas muy pequeñas */
+    }
+}
+footer {
+    background-color: rgb(43, 43, 43);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente todos los elementos hijos */
+    padding: 40px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row; /* Alinea íconos en una fila */
+    align-items: center; /* Centra verticalmente los íconos en la fila */
+    justify-content: center; /* Centra horizontalmente los íconos */
+    gap: 20px; /* Espacio entre los íconos */
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Remove default list styles and link underlines */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+}
+
+/* Social icons styling */
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+}
+
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: 0.3s;
+}
+
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: 0.3s;
+}
+
+.containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align items to the start for mobile view */
+        justify-content: center !important;
+    }
+    
+    .footer-left, .footer-middle, .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        width: 100%;
+        padding: 20px 0; /* Adjust padding for mobile view */
+    }
+    
+    .footer-left {
+        order: 1; /* Order for mobile view */
+    }
+    
+    .footer-middle {
+        order: 2; /* Order for mobile view */
+    }
+    
+    .footer-right {
+        order: 3; /* Order for mobile view */
+    }
+    
+    .social-icons {
+        flex-direction: column; /* Stack social icons vertically */
+        gap: 10px; /* Adjust gap for mobile view */
+    }
+}
