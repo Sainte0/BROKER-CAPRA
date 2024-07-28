@@ -7,7 +7,14 @@ import '../pages/css/Broker.css'
 
 
 
-
+const insuranceCards = [
+    { title: 'AUTOMOTOR', description: 'Protección completa para tu vehículo.', svg: '🚗' },
+    { title: 'HOGAR', description: 'Seguro integral para tu hogar y pertenencias.', svg: '🏠' },
+    { title: 'VIDA', description: 'Asegura el bienestar de tu familia.', svg: '❤️' },
+    { title: 'SALUD', description: 'Cobertura médica para ti y tu familia.', svg: '🩺' },
+    { title: 'COMERCIO', description: 'Protección para tu negocio.', svg: '🏪' },
+    { title: 'ACCIDENTES PERSONALES', description: 'Cobertura ante accidentes personales.', svg: '⚕️' }
+];
 
 const Broker = () => {
     return (
@@ -16,16 +23,16 @@ const Broker = () => {
 
             <WhatsAppButton />
 
-            <Breadcrumb/>
+            <Breadcrumb />
 
             <div className="container">
 
                 <div className="history-section">
                     <h2 className="history-title">BROKER</h2>
 
-                    <span className="history-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-                        ipsum labore praesentium nihil nulla. Nisi praesentium, architecto porro perferendis cum tenetur
-                        suscipit voluptatem voluptate eligendi enim dolorem reiciendis. Velit, eius!</span>
+                    <p className='history-subtitle'>
+                        Un broker de seguros actúa como intermediario entre los clientes y las compañías de seguros. Su principal función es asesorar a los clientes en la selección de pólizas de seguros que mejor se adapten a sus necesidades específicas, buscando siempre las mejores opciones en términos de cobertura y costos. Además, un broker de seguros se encarga de gestionar los trámites y papeleos necesarios, proporcionando un servicio personalizado y continuo para garantizar que los clientes estén siempre protegidos y satisfechos con sus pólizas.
+                    </p>
 
                     <div className="history">
                         <div className="card-history">
@@ -56,7 +63,7 @@ const Broker = () => {
                         <div className="card">
                             <div className="card-info">
                                 <div className="card-avatar"></div>
-                                <div className="card-title">Steve Jobs</div>
+                                <div className="card-title">SERGIO CAPRA</div>
                                 <div className="card-subtitle">CEO &amp; Co-Founder</div>
                             </div>
                             <ul className="card-social">
@@ -86,8 +93,8 @@ const Broker = () => {
                         <div className="card">
                             <div className="card-info">
                                 <div className="card-avatar"></div>
-                                <div className="card-title">Steve Jobs</div>
-                                <div className="card-subtitle">CEO &amp; Co-Founder</div>
+                                <div className="card-title">MARTIN CAPRA</div>
+                                <div className="card-subtitle">SENIOR PARTNER</div>
                             </div>
                             <ul className="card-social">
                                 <li className="card-social__item">
@@ -116,8 +123,8 @@ const Broker = () => {
                         <div className="card">
                             <div className="card-info">
                                 <div className="card-avatar"></div>
-                                <div className="card-title">Steve Jobs</div>
-                                <div className="card-subtitle">CEO &amp; Co-Founder</div>
+                                <div className="card-title">INGACIO CAPRA</div>
+                                <div className="card-subtitle">SENIOR PARTNER</div>
                             </div>
                             <ul className="card-social">
                                 <li className="card-social__item">
@@ -149,60 +156,18 @@ const Broker = () => {
 
                     <hr />
                     <div className="seguros">
-                        <div className="servicios">
-                            <div className="servicios-details">
-                                <p className="text-title">Card title</p>
-                                <p className="text-body">Here are the details of the card</p>
+                        {insuranceCards.map((card, index) => (
+                            <div className="servicios" key={index}>
+                                <div className="servicios-details">
+                                    <div className="seguros-card-svg">{card.svg}</div>
+                                    <p className="text-title">{card.title}</p>
+                                    <p className="text-body">{card.description}</p>
+                                </div>
+                                <Link to="/seguros">
+                                    <button className="servicios-button">Más Info</button>
+                                </Link>
                             </div>
-                            <Link to="/seguros">
-                                <button className="servicios-button">More info</button>
-                            </Link>
-                        </div>
-                        <div className="servicios">
-                            <div className="servicios-details">
-                                <p className="text-title">Card title</p>
-                                <p className="text-body">Here are the details of the card</p>
-                            </div>
-                            <Link to="/seguros">
-                                <button className="servicios-button">More info</button>
-                            </Link>
-                        </div>
-                        <div className="servicios">
-                            <div className="servicios-details">
-                                <p className="text-title">Card title</p>
-                                <p className="text-body">Here are the details of the card</p>
-                            </div>
-                            <Link to="/seguros">
-                                <button className="servicios-button">More info</button>
-                            </Link>
-                        </div>
-                        <div className="servicios">
-                            <div className="servicios-details">
-                                <p className="text-title">Card title</p>
-                                <p className="text-body">Here are the details of the card</p>
-                            </div>
-                            <Link to="/seguros">
-                                <button className="servicios-button">More info</button>
-                            </Link>
-                        </div>
-                        <div className="servicios">
-                            <div className="servicios-details">
-                                <p className="text-title">Card title</p>
-                                <p className="text-body">Here are the details of the card</p>
-                            </div>
-                            <Link to="/seguros">
-                                <button className="servicios-button">More info</button>
-                            </Link>
-                        </div>
-                        <div className="servicios">
-                            <div className="servicios-details">
-                                <p className="text-title">Card title</p>
-                                <p className="text-body">Here are the details of the card</p>
-                            </div>
-                            <Link to="/seguros">
-                                <button className="servicios-button">More info</button>
-                            </Link>
-                        </div>
+                        ))}
                     </div>
 
 
@@ -213,9 +178,9 @@ const Broker = () => {
 
 
             </div>
-       
 
-        <Sponsor/>
+
+            <Sponsor />
 
 
         </div>

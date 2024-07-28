@@ -1,0 +1,34 @@
+/* Companias.css */
+
+.companies-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.company {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+
+.company:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+    width: 150px; /* Ancho fijo */
+    height: 100px; /* Alto fijo */
+    object-fit: contain; /* Mantener la proporción del logo */
+    margin-bottom: 10px;
+}
+
+.company p {
+    color: #666;
+}

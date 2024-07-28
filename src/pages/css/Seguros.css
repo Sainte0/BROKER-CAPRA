@@ -1,0 +1,123 @@
+.form-container {
+    max-width: 774px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro para el formulario */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 5px; /* Bordes redondeados para los inputs */
+    box-shadow: none; /* Elimina la sombra predeterminada de los inputs */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+}
+
+.form-control::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+textarea.form-control {
+    resize: none; /* Evita que el textarea se redimensione */
+}
+
+.btn-primary {
+    background-color: #5c2434; /* Color de fondo del botón */
+    border-color: #5c2434; /* Color del borde del botón */
+    padding: 10px 30px; /* Espaciado interno del botón */
+    font-size: 18px; /* Tamaño de fuente del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+}
+
+.btn-primary:hover {
+    background-color: #ad3d5d; /* Color de fondo del botón al pasar el cursor */
+    border-color: #d5466e; /* Color del borde del botón al pasar el cursor */
+}
+/* Estilos generales */
+.seguros-card {
+    width: 190px;
+    height: 254px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #5c2434;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #7e3a4d 30%, #5c2434 70%);
+    color: white;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #5c2434 30%, #7e3a4d 70%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.seguros-card-svg {
+    font-size: 2.5em; /* Ajusta este valor para agrandar el SVG */
+    color: white; /* Asegúrate de que los SVG sean visibles */
+}
+
+/* Responsivo: dos columnas en dispositivos móviles */
+@media (max-width: 768px) {
+    .seguros {
+        gap: 20px; /* Espacio entre tarjetas en móviles */
+    }
+    .servicios {
+        width: calc(50% - 10px); /* Dos columnas en móviles */
+    }
+}
+
+/* Responsivo: una columna en pantallas más pequeñas */
+@media (max-width: 480px) {
+    .servicios {
+        width: calc(100% - 10px); /* Una columna en pantallas pequeñas */
+    }
+}
+

@@ -7,6 +7,236 @@ body {
 
 }
 
+/* Contenedor principal del encabezado */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f8f9fa; /* Ajusta el color de fondo según sea necesario */
+}
+
+/* Contenedor del logo y del menú */
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+/* Contenedor del logo */
+.logo-container {
+    flex: 1;
+}
+
+/* Contenedor del menú de navegación */
+.nav-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Estilo para el menú desplegable completo */
+.dropdown-menu {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+/* Estilo para los elementos del menú desplegable */
+.dropdown-item {
+    color: black;
+    font-size: 0.9rem;
+}
+
+/* Estilo para el elemento del menú desplegable al pasar el cursor */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+/* Estilo para los submenús */
+.dropdown-submenu .dropdown-menu {
+    background-color: white;
+    border-left: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+/* Flecha del dropdown que indica sub-opciones */
+.dropdown-submenu .dropdown-toggle::after {
+    font-size: 0.8rem;
+    color: black;
+    margin-left: 0.5rem;
+}
+
+/* Mostrar submenús */
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: 0;
+}
+
+/* Estilo general para el botón del menú desplegable */
+.navbar-toggler {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+}
+
+/* Ajusta el color de la flecha en el botón del menú */
+.navbar-toggler-icon {
+    color: black;
+}
+
+/* Ensure submenus display correctly */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+/* Color del texto de los enlaces de navegación a negro */
+.navbar-nav .nav-link {
+    color: black;
+    position: relative;
+}
+
+/* Efecto de línea roja al pasar el cursor */
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #5c2434;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: black;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: black;
+}
+
+/* Aumenta el espaciado entre los elementos de navegación */
+.navbar-nav .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 20px;
+}
+/* General styles for the responsive menu */
+@media (max-width: 768px) {
+    
+    .nav-container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: flex; /* Ensures that the dropdown menu is positioned correctly */
+    }
+
+    .navbar-toggler {
+        
+        border: none;
+        background: none;
+        z-index: 1001; /* Ensure the button is above the menu */
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml,...'); /* Replace with your hamburger icon */
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-collapse {
+        display: none; /* Hide menu by default */
+        position: absolute;
+        top: 68px; /* Adjust according to the height of your header */
+        left: 0;
+        width: 100vw; /* Full width of the viewport */
+        background-color: #5c2434;
+        z-index: 1000; /* Ensure it overlays other content */
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start (left) */
+        padding: 0; /* Remove any default padding */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0; /* Remove any default margin */
+        padding: 0; /* Remove any default padding */
+    }
+
+    .nav-link {
+        color: #fff;
+        padding: 15px;
+        text-align: left; /* Align text to the left */
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid #4a1b2a; /* Optional: Adds a border between menu items */
+    }
+
+    .nav-link:hover {
+        background-color: #4a1b2a; /* Hover effect */
+        text-decoration: none;
+    }
+
+    .dropdown-menu {
+        background-color: #5c2434;
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #fff;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #4a1b2a;
+    }
+}
+
+/* Adjust logo position on small screens */
+@media (max-width: 576px) {
+    .logo-header {
+        width: 160px; /* Adjust the size as needed */
+        margin-left: -12px; /* Adjust to move logo slightly to the left */
+    }
+
+    .navbar-toggler-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
 
 
 
@@ -21,7 +251,42 @@ body {
 
 
 /* Estilo general para la barra del breadcrumb */
+.breadcrumb {
+    font-family: "Poppins", sans-serif;
+    font-weight: 350;
+    margin-top: 10px;
+    background-color: white;
+    /* Fondo blanco para la barra del breadcrumb */
+    font-size: 0.2rem;
+    /* Tamaño de fuente más pequeño (ajusta según sea necesario) */
+}
 
+/* Estilo para los elementos del breadcrumb */
+.breadcrumb .breadcrumb-item {
+    color: gray;
+    /* Color gris para el texto de los elementos del breadcrumb */
+    font-size: inherit;
+    /* Asegura que los elementos hereden el tamaño de fuente del contenedor */
+}
+
+/* Estilo para el elemento activo del breadcrumb */
+.breadcrumb .breadcrumb-item.active {
+    color: white;
+    /* Color blanco para el texto del elemento activo */
+}
+
+/* Estilo para los enlaces dentro del breadcrumb */
+.breadcrumb .breadcrumb-item a {
+    color: gray;
+    /* Color gris para el enlace */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+    color: black;
+    /* Color negro para el enlace al pasar el cursor sobre él */
+}
 
 
 .history-section {
@@ -49,7 +314,7 @@ body {
     margin: 20px;
     height: auto; /* Asegura que el contenedor ajuste su altura al contenido */
     text-align: center; /* Opcional, asegura que el texto esté centrado dentro de su contenedor si hay varias líneas */
-    font-size: 15px;
+    font-size: 12px;
 }
 
 
@@ -312,83 +577,3 @@ hr{
 }
 
   
-/* Estilos generales */
-.servicios {
-    width: 190px;
-    height: 254px;
-    border-radius: 20px;
-    background: #f5f5f5;
-    position: relative;
-    padding: 1.8rem;
-    border: 2px solid #c3c6ce;
-    transition: 0.5s ease-out;
-    overflow: visible;
-}
-
-.servicios-details {
-    color: black;
-    height: 100%;
-    gap: .5em;
-    display: grid;
-    place-content: center;
-}
-
-.servicios-button {
-    transform: translate(-50%, 125%);
-    width: 60%;
-    border-radius: 1rem;
-    border: none;
-    background-color: #5c2434;
-    color: #fff;
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    opacity: 0;
-    transition: 0.3s ease-out;
-}
-
-.text-body {
-    color: rgb(134, 134, 134);
-}
-
-.text-title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.servicios:hover {
-    border-color: #5c2434;
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-}
-
-.servicios:hover .servicios-button {
-    transform: translate(-50%, 50%);
-    opacity: 1;
-}
-
-.seguros {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
-}
-
-/* Responsivo: dos columnas en dispositivos móviles */
-@media (max-width: 768px) {
-    .seguros {
-        gap: 20px; /* Espacio entre tarjetas en móviles */
-    }
-    .servicios {
-        width: calc(50% - 10px); /* Dos columnas en móviles */
-    }
-}
-
-/* Responsivo: una columna en pantallas más pequeñas */
-@media (max-width: 480px) {
-    .servicios {
-        width: calc(100% - 10px); /* Una columna en pantallas pequeñas */
-    }
-}
-

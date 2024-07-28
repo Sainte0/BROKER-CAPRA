@@ -1,0 +1,41 @@
+.form-container {
+    max-width: 774px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro para el formulario */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 5px; /* Bordes redondeados para los inputs */
+    box-shadow: none; /* Elimina la sombra predeterminada de los inputs */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+}
+
+.form-control::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+textarea.form-control {
+    resize: none; /* Evita que el textarea se redimensione */
+}
+
+.btn-primary {
+    background-color: #5c2434; /* Color de fondo del botón */
+    border-color: #5c2434; /* Color del borde del botón */
+    padding: 10px 30px; /* Espaciado interno del botón */
+    font-size: 18px; /* Tamaño de fuente del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+}
+
+.btn-primary:hover {
+    background-color: #ad3d5d; /* Color de fondo del botón al pasar el cursor */
+    border-color: #d5466e; /* Color del borde del botón al pasar el cursor */
+}
