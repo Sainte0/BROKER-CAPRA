@@ -84,3 +84,246 @@
         width: calc(100% - 10px); /* Una columna en pantallas pequeñas */
     }
 }
+
+.card-history {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    position: relative; /* Establece un contexto de posicionamiento para el título */
+}
+
+.card-history-title {
+    position: absolute; /* Cambia de relative a absolute */
+    top: 10px; /* Ajusta la posición superior para estar un poco más abajo */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para centrar correctamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.card {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 254px;
+    background: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: all ease-in-out 0.3s;
+}
+
+.card:hover {
+    background-color: #fdfdfd;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .background {
+        height: 40vh;
+        /* Ajusta la altura para pantallas más pequeñas */
+    }
+
+    .history-section {
+        margin-top: -20px;
+        /* Ajusta según sea necesario */
+        padding: 15px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+
+    .history-title {
+        font-size: 1.5rem;
+        /* Tamaño de fuente más pequeño */
+        padding: 8px 16px;
+    }
+
+    .history-subtitle {
+        margin: 15px;
+        /* Ajusta el margen */
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-history {
+        flex-direction: column;
+        /* Cambia la dirección de los elementos en pantallas pequeñas */
+        gap: 15px;
+        /* Ajusta el espacio entre los elementos */
+        align-items: center;
+    }
+
+    .card {
+        padding: 15px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .history-title {
+        font-size: 1.2rem;
+        /* Tamaño de fuente aún más pequeño */
+        padding: 6px 12px;
+    }
+
+    .history-subtitle {
+        margin: 10px;
+        /* Ajusta el margen */
+    }
+
+    .card {
+        padding: 10px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
+
+/* Estilos básicos para .card */
+.card {
+    width: 190px;
+    height: 254px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para la información dentro de la tarjeta */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Imagen de la tarjeta */
+.card-avatar {
+    --size: 60px;
+    background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: transform .2s ease;
+    margin-bottom: 1rem;
+}
+
+.card-social {
+    display: flex;
+    justify-content: space-between; /* Distribuye los ítems con espacio entre ellos */
+    width: 40%;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.card-social__item {
+    list-style: none;
+    display: flex; /* Asegura que el SVG se alinee correctamente dentro de su contenedor */
+}
+
+.card-social__item svg {
+    height: 18px;
+    width: 18px;
+    fill: #515F65;
+    cursor: pointer;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+
+/* Texto de la tarjeta */
+.card-title {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.card-subtitle {
+    color: #859ba8;
+    font-size: 0.8em;
+}
+
+/* Efectos de hover */
+.card:hover {
+    box-shadow: 0 8px 50px #23232333;
+}
+
+.card:hover .card-info {
+    transform: translateY(-5%);
+}
+
+.card:hover .card-social {
+    opacity: 1;
+}
+
+.card-social__item svg:hover {
+    fill: #232323;
+    transform: scale(1.1);
+}
+
+.card-avatar:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos básicos para .personas */
+.personas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* Centra las tarjetas en la línea */
+    align-items: center;
+    /* Alinea las tarjetas verticalmente en el centro */
+}
+
+/* Media Queries */
+
+/* Pantallas grandes (de escritorio) */
+@media (min-width: 1024px) {
+    .personas {
+        justify-content: space-around;
+        /* Distribuye las tarjetas con más espacio en pantallas grandes */
+    }
+}
+
+/* Pantallas medianas (tablets en modo horizontal) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .card {
+        width: 150px;
+        /* Reduce el ancho de las tarjetas */
+        height: 200px;
+        /* Reduce la altura de las tarjetas */
+    }
+}
+
+/* Pantallas pequeñas (tabletas en modo vertical y móviles) */
+@media (max-width: 768px) {
+    .personas {
+        flex-direction: column;
+        /* Cambia la dirección de las tarjetas a columna */
+        align-items: center;
+        /* Alinea las tarjetas al centro */
+        gap: 15px;
+        /* Reduce el espacio entre las tarjetas */
+    }
+
+    .card {
+        width: 100%;
+        /* Las tarjetas ocupan todo el ancho disponible */
+        max-width: 300px;
+        /* Ancho máximo de las tarjetas */
+        height: auto;
+        /* Ajusta la altura automáticamente */
+    }
+}

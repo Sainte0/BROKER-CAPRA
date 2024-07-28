@@ -16,6 +16,7 @@ import image12 from '../assets/img/galeno.png';
 import image13 from '../assets/img/berkley.png';
 import image14 from '../assets/img/prevencion.png';
 import '../pages/css/Companias.css';
+import Sponsor from '../components/Sponsor';
 
 const Companias = () => {
     return (
@@ -88,6 +89,7 @@ const Companias = () => {
                 </div>
                 
             </div>
+            <Sponsor/>
         </div>
     );
 };

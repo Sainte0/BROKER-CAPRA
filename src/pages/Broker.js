@@ -31,8 +31,9 @@ const Broker = () => {
                     <h2 className="history-title">BROKER</h2>
 
                     <p className='history-subtitle'>
-                        Un broker de seguros actúa como intermediario entre los clientes y las compañías de seguros. Su principal función es asesorar a los clientes en la selección de pólizas de seguros que mejor se adapten a sus necesidades específicas, buscando siempre las mejores opciones en términos de cobertura y costos. Además, un broker de seguros se encarga de gestionar los trámites y papeleos necesarios, proporcionando un servicio personalizado y continuo para garantizar que los clientes estén siempre protegidos y satisfechos con sus pólizas.
+                        Un broker de seguros es un intermediario que asesora a los clientes en la selección de pólizas de seguros, buscando las mejores opciones en cobertura y costo. Gestiona los trámites necesarios y ofrece un servicio personalizado para asegurar que los clientes estén protegidos y satisfechos.
                     </p>
+
 
                     <div className="history">
                         <div className="card-history">
