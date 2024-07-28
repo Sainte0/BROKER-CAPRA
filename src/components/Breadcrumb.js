@@ -1,7 +1,8 @@
 // src/components/Breadcrumb.js
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import './css/Breadcrumb.css'; // Opcional: Importa estilos CSS si los tienes
+import './css/Breadcrumb.css'
+
 
 const Breadcrumb = () => {
     const location = useLocation();

@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.breadcrumb {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    /* Fondo blanco para la barra del breadcrumb */
+    font-size: 1rem;
+    /* Tamaño de fuente más pequeño (ajusta según sea necesario) */
+}
+
+/* Estilo para los elementos del breadcrumb */
+.breadcrumb .breadcrumb-item {
+    color: gray;
+    /* Color gris para el texto de los elementos del breadcrumb */
+    font-size: inherit;
+    /* Asegura que los elementos hereden el tamaño de fuente del contenedor */
+}
+
+/* Estilo para el elemento activo del breadcrumb */
+.breadcrumb .breadcrumb-item.active {
+    color: white;
+    /* Color blanco para el texto del elemento activo */
+}
+
+/* Estilo para los enlaces dentro del breadcrumb */
+.breadcrumb .breadcrumb-item a {
+    color: gray;
+    /* Color gris para el enlace */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+    color: black;
+    /* Color negro para el enlace al pasar el cursor sobre él */
+}
