@@ -8,6 +8,7 @@
     /* Fondo blanco para la barra del breadcrumb */
     font-size: 1rem;
     /* Tamaño de fuente más pequeño (ajusta según sea necesario) */
+    font-family: "Poppins", sans-serif;
 }
 
 /* Estilo para los elementos del breadcrumb */

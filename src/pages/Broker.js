@@ -4,6 +4,8 @@ import WhatsAppButton from '../components/WhatsAppButton'; // Asegúrate de que 
 import Breadcrumb from '../components/Breadcrumb';
 import Sponsor from '../components/Sponsor'
 import '../pages/css/Broker.css'
+import martin from '../assets/img/martin.jpg'
+import ignacio from '../assets/img/ignacio.jpg'
 
 
 
@@ -59,11 +61,11 @@ const Broker = () => {
                         </div>
                     </div>
                     <hr />
-                    <div className="personas">
+                    <div className="personas">  
 
                         <div className="card">
                             <div className="card-info">
-                                <div className="card-avatar"></div>
+                                <div className="card-avatar" style={{ backgroundImage: `url(${martin})` }}></div>                               
                                 <div className="card-title">SERGIO CAPRA</div>
                                 <div className="card-subtitle">CEO &amp; Co-Founder</div>
                             </div>
@@ -93,8 +95,8 @@ const Broker = () => {
                         </div>
                         <div className="card">
                             <div className="card-info">
-                                <div className="card-avatar"></div>
-                                <div className="card-title">MARTIN CAPRA</div>
+                            <div className="card-avatar" style={{ backgroundImage: `url(${ignacio})` }}></div>                               
+                            <div className="card-title">MARTIN CAPRA</div>
                                 <div className="card-subtitle">SENIOR PARTNER</div>
                             </div>
                             <ul className="card-social">
@@ -156,21 +158,23 @@ const Broker = () => {
 
 
                     <hr />
-                    <div className="seguros">
-                        {insuranceCards.map((card, index) => (
-                            <div className="servicios" key={index}>
-                                <div className="servicios-details">
-                                    <div className="seguros-card-svg">{card.svg}</div>
-                                    <p className="text-title">{card.title}</p>
-                                    <p className="text-body">{card.description}</p>
+                    <div>
+                        <h2 className="section-title">TIPOS DE SEGUROS</h2>
+                        <div className="seguros">
+                            {insuranceCards.map((card, index) => (
+                                <div className="servicios" key={index}>
+                                    <div className="servicios-details">
+                                        <div className="seguros-card-svg">{card.svg}</div>
+                                        <p className="text-title">{card.title}</p>
+                                        <p className="text-body">{card.description}</p>
+                                    </div>
+                                    <Link to="/seguros">
+                                        <button className="servicios-button">Más Info</button>
+                                    </Link>
                                 </div>
-                                <Link to="/seguros">
-                                    <button className="servicios-button">Más Info</button>
-                                </Link>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-
 
 
                 </div>

@@ -105,6 +105,25 @@
 
 
 
+.card-history {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    position: relative; /* Establece un contexto de posicionamiento para el título */
+}
+
+.card-history-title {
+    position: absolute; /* Cambia de relative a absolute */
+    top: 10px; /* Ajusta la posición superior para estar un poco más abajo */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para centrar correctamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
 .card {
     flex: 1;
     padding: 20px;
@@ -145,6 +164,7 @@
         font-size: 1.5rem;
         /* Tamaño de fuente más pequeño */
         padding: 8px 16px;
+        text-align: center; /* Asegura que el texto esté centrado */
     }
 
     .history-subtitle {
@@ -153,6 +173,7 @@
         align-items: center;
         display: flex;
         justify-content: center;
+        text-align: center; /* Asegura que el texto esté centrado */
     }
 
     .card-history {
@@ -174,11 +195,13 @@
         font-size: 1.2rem;
         /* Tamaño de fuente aún más pequeño */
         padding: 6px 12px;
+        text-align: center; /* Asegura que el texto esté centrado */
     }
 
     .history-subtitle {
         margin: 10px;
         /* Ajusta el margen */
+        text-align: center; /* Asegura que el texto esté centrado */
     }
 
     .card {
@@ -186,6 +209,7 @@
         /* Ajusta el padding para pantallas más pequeñas */
     }
 }
+
 
 /* Estilos básicos para .card */
 .card {
@@ -207,17 +231,20 @@
     align-items: center;
     transition: transform .2s ease, opacity .2s ease;
 }
-
 /* Imagen de la tarjeta */
 .card-avatar {
-    --size: 60px;
-    background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+    --size: 100px;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
     transition: transform .2s ease;
     margin-bottom: 1rem;
+    background-size: contain;  /* Ajusta la imagen para que se vea completa */
+    background-position: center;  /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
 }
+
+
 
 .card-social {
     display: flex;

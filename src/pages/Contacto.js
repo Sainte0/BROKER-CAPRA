@@ -115,10 +115,10 @@ const Contacto = () => {
                                     rows="5"
                                     value={formData.message}
                                     onChange={handleChange}
-                                ></textarea>
+                                ></textarea>    
                             </div>
                             <div className="text-center">
-                                <button type="submit" className="btn btn-lg btn-primary px-9">Submit</button>
+                                <button type="submit" className="btn btn-lg btn-primary px-9">Enviar</button>
                             </div>
                         </form>
                     </div>

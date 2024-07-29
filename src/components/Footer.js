@@ -57,7 +57,7 @@ const Footer = () => {
                         <li><a href="tel:+351 6434343">Martin Capra</a></li>
                         <li><a href="tel:+351 6793900">Sergio Capra</a></li>
                         <li><a href="tel:+351 3408484">Ignacio Capra</a></li>
-                        <li><a href="mailto:caprabrokerinfo@gmail.com">caprabrokerinfo@gmail.com</a></li>
+                        <li><a href="mailto:caprabrokerinfo@gmail.com">consultas@capraseguros.com</a></li>
                     </ul>
                 </div>
             </div>

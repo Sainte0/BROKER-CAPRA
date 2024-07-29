@@ -1,8 +1,10 @@
 /* Menú de navegación */
 .navbar {
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     width: 100%;
+    
 }
 /* Contenedor del logo */
 .logo-container {
@@ -11,6 +13,7 @@
 
 /* Contenedor del menú de navegación */
 .nav-container {
+    
     flex: 2;
     display: flex;
     justify-content: center;
