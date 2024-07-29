@@ -42,6 +42,7 @@ const Seguros = () => {
             });
         }).catch((err) => {
             console.error('FAILED...', err);
+            alert('Failed to send message. Please try again later.');
         });
     };
 

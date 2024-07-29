@@ -27,7 +27,7 @@ const Contacto = () => {
             'service_h0tjib7', 
             'template_66psx5b', 
             formData, 
-            'Martin'
+            'GbuqRayxrVv2WVcfD'
         ).then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             // Clear form
@@ -40,8 +40,10 @@ const Contacto = () => {
             });
         }).catch((err) => {
             console.error('FAILED...', err);
+            alert('Failed to send message. Please try again later.');
         });
     };
+    
 
     return (
         <div className="contenedor-main">
