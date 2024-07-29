@@ -6,7 +6,7 @@ import Sponsor from '../components/Sponsor'
 import '../pages/css/Broker.css'
 import martin from '../assets/img/martin.jpg'
 import ignacio from '../assets/img/ignacio.jpg'
-
+import sergio from '../assets/img/sergio.jpg'
 
 
 const insuranceCards = [
@@ -61,11 +61,12 @@ const Broker = () => {
                         </div>
                     </div>
                     <hr />
-                    <div className="personas">  
+                    <div className="personas">
 
                         <div className="card">
                             <div className="card-info">
-                                <div className="card-avatar" style={{ backgroundImage: `url(${martin})` }}></div>                               
+                                <div className="card-avatar" style={{ backgroundImage: `url(${sergio})` }}></div>
+
                                 <div className="card-title">SERGIO CAPRA</div>
                                 <div className="card-subtitle">CEO &amp; Co-Founder</div>
                             </div>
@@ -95,8 +96,8 @@ const Broker = () => {
                         </div>
                         <div className="card">
                             <div className="card-info">
-                            <div className="card-avatar" style={{ backgroundImage: `url(${ignacio})` }}></div>                               
-                            <div className="card-title">MARTIN CAPRA</div>
+                                <div className="card-avatar" style={{ backgroundImage: `url(${ignacio})` }}></div>
+                                <div className="card-title">INGACIO CAPRA</div>
                                 <div className="card-subtitle">SENIOR PARTNER</div>
                             </div>
                             <ul className="card-social">
@@ -125,8 +126,8 @@ const Broker = () => {
                         </div>
                         <div className="card">
                             <div className="card-info">
-                                <div className="card-avatar"></div>
-                                <div className="card-title">INGACIO CAPRA</div>
+                                <div className="card-avatar" style={{ backgroundImage: `url(${martin})` }}></div>
+                                <div className="card-title">MARTIN CAPRA</div>
                                 <div className="card-subtitle">SENIOR PARTNER</div>
                             </div>
                             <ul className="card-social">
@@ -153,6 +154,7 @@ const Broker = () => {
                                 </li>
                             </ul>
                         </div>
+
 
                     </div>
 

@@ -232,6 +232,7 @@
     transition: transform .2s ease, opacity .2s ease;
 }
 /* Imagen de la tarjeta */
+/* Imagen de la tarjeta */
 .card-avatar {
     --size: 100px;
     width: var(--size);
@@ -239,10 +240,14 @@
     border-radius: 50%;
     transition: transform .2s ease;
     margin-bottom: 1rem;
-    background-size: contain;  /* Ajusta la imagen para que se vea completa */
+    background-size: cover;  /* Ajusta la imagen para que cubra todo el contenedor */
     background-position: center;  /* Centra la imagen en el contenedor */
-    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    margin: 10px;  /* Añade margen alrededor de la imagen */
+    padding: 5px;  /* Añade un relleno interno para que la imagen no se recorte */
+    background-clip: content-box;  /* Asegura que el relleno no cubra la imagen */
 }
+
+
 
 
 
