@@ -15,6 +15,7 @@ const App = () => {
     <Router>
       <Header />
       <Routes>
+        <Route path="/" element={<Broker />} />
         <Route path="/broker" element={<Broker />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/seguros" element={<Seguros />} />
@@ -22,7 +23,6 @@ const App = () => {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/politicas" element={<Politicas />} /> 
         <Route path="/terminos" element={<Terminos />} /> 
-        <Route path="/" element={<Broker />} />
       </Routes>
       <Footer />
     </Router>

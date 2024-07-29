@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,  } from 'react-router-dom';
 import WhatsAppButton from '../components/WhatsAppButton'; // Asegúrate de que la ruta sea correcta
 import Breadcrumb from '../components/Breadcrumb';
 import Sponsor from '../components/Sponsor'
@@ -7,6 +7,7 @@ import '../pages/css/Broker.css'
 import martin from '../assets/img/martin.jpg'
 import ignacio from '../assets/img/ignacio.jpg'
 import sergio from '../assets/img/sergio.jpg'
+
 
 
 const insuranceCards = [
@@ -17,6 +18,8 @@ const insuranceCards = [
     { title: 'COMERCIO', description: 'Protección para tu negocio.', svg: '🏪' },
     { title: 'ACCIDENTES PERSONALES', description: 'Cobertura ante accidentes personales.', svg: '⚕️' }
 ];
+
+
 
 const Broker = () => {
     return (

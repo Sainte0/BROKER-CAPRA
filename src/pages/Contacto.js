@@ -24,10 +24,10 @@ const Contacto = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         emailjs.send(
-            'YOUR_SERVICE_ID', 
-            'YOUR_TEMPLATE_ID', 
+            'service_h0tjib7', 
+            'template_66psx5b', 
             formData, 
-            'YOUR_USER_ID'
+            'Martin'
         ).then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             // Clear form

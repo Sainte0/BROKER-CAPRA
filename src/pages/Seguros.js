@@ -25,10 +25,10 @@ const Seguros = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         emailjs.send(
-            'YOUR_SERVICE_ID',
-            'YOUR_TEMPLATE_ID',
+            'service_h0tjib7',
+            'template_xdw99jd',
             formData,
-            'YOUR_USER_ID'
+            'GbuqRayxrVv2WVcfD'
         ).then((response) => {
             console.log('SUCCESS!', response.status, response.text);
             // Clear form
