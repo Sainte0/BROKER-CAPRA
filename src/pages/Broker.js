@@ -15,7 +15,7 @@ const insuranceCards = [
     { title: 'HOGAR', description: 'Seguro integral para tu hogar y pertenencias.', svg: '🏠' },
     { title: 'VIDA', description: 'Asegura el bienestar de tu familia.', svg: '❤️' },
     { title: 'SALUD', description: 'Cobertura médica para ti y tu familia.', svg: '🩺' },
-    { title: 'COMERCIO', description: 'Protección para tu negocio.', svg: '🏪' },
+    { title: 'COMERCIO INTEGRAL', description: 'Protección para tu negocio.', svg: '🏪' },
     { title: 'ACCIDENTES PERSONALES', description: 'Cobertura ante accidentes personales.', svg: '⚕️' }
 ];
 
