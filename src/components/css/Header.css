@@ -1,11 +1,20 @@
 /* Menú de navegación */
+/* Contenedor principal del encabezado */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #f8f9fa; /* Ajusta el color de fondo según sea necesario */
+}
+
 .navbar {
     font-family: "Poppins", sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra el menú en pantallas grandes */
     width: 100%;
-    
 }
+
 /* Contenedor del logo */
 .logo-container {
     flex: 1;
@@ -13,12 +22,10 @@
 
 /* Contenedor del menú de navegación */
 .nav-container {
-    
     flex: 2;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra el menú en pantallas grandes */
 }
-
 
 /* Estilo para el menú desplegable completo */
 .dropdown-menu {
@@ -67,7 +74,7 @@
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 0.25rem;
-    margin-left: auto; /* Alinea a la derecha */
+    margin-left: auto; /* Alinea a la derecha en pantallas grandes */
 }
 
 /* Ajusta el color de la flecha en el botón del menú */
@@ -130,18 +137,66 @@
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 768px) {
     .navbar {
-        justify-content: space-between; /* Asegura que los elementos estén correctamente distribuidos */
+        justify-content: space-between; /* Distribuye los elementos correctamente en dispositivos móviles */
     }
 
+    .logo-container {
+        flex: 0; /* Ajusta el contenedor del logo para dispositivos móviles */
+    }
+
+    .nav-container {
+        flex: 0; /* Ajusta el contenedor del menú para dispositivos móviles */
+        width: 100%; /* Asegura que el menú ocupe todo el ancho */
+        display: block; /* Muestra el contenedor del menú como bloque */
+    }
+
+    /* Asegura que el botón del menú esté visible y alineado correctamente */
     .navbar-toggler {
-        order: 1; /* Coloca el botón del menú en primer lugar */
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        z-index: 999; /* Asegura que el botón esté sobre otros elementos */
     }
 
-    .navbar-brand {
-        order: 0; /* Coloca el logo en segundo lugar */
+    /* Asegura que los enlaces del menú sean blancos y grandes */
+    .nav-link {
+        color: white !important;
+        font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+        
     }
 
+    /* Estilo del menú desplegable */
     .navbar-collapse {
-        width: 100%; /* Asegura que el menú desplegable ocupe todo el ancho */
+        display: none; /* Oculta el menú por defecto */
+        position: fixed; /* Posición fija para que el menú se quede en la pantalla */
+        top: 0; /* Alinea el menú al borde superior */
+        left: -250px; /* Oculta el menú a la izquierda fuera de la pantalla */
+        width: 250px; /* Ancho del menú */
+        height: 100%; /* Altura completa de la pantalla */
+        background-color: #5c2434; /* Color de fondo del menú */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Opcional: añade una sombra para el efecto de profundidad */
+        transition: left 0.3s ease; /* Transición para el efecto de apertura */
+        z-index: 999; /* Asegura que el menú esté encima de otros elementos */
+    }
+
+    /* Estilo cuando el menú está visible */
+    .navbar-collapse.show {
+        display: block;
+        left: 0; /* Muestra el menú moviéndolo a la izquierda */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Alinea los elementos del menú verticalmente */
+        margin-top: 10px; /* Ajusta el margen superior del menú */
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0; /* Elimina el margen izquierdo en vista móvil */
+        margin-bottom: 0; /* Asegura que no haya margen inferior en los elementos del menú */
+    }
+
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0; /* Elimina el margen inferior en el último ítem */
     }
 }
+

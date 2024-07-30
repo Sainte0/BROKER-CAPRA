@@ -68,7 +68,7 @@ const Seguros = () => {
             svg: '🩺'
         },
         {
-            title: 'COMERCIO',
+            title: 'COMERCIO INTEGRAL',
             description: 'Protección para tu negocio. Cubre daños a la propiedad, robos y responsabilidad civil.',
             svg: '🏪'
         },
@@ -177,6 +177,9 @@ const Seguros = () => {
                                                 <option value="RC">RC</option>
                                                 <option value="ROBO">ROBO</option>
                                                 <option value="AGRO">AGRO</option>
+                                                <option value="OPERATIVO">TODO RIESGO OPERATIVO</option>
+                                                <option value="CAUCIONES">CAUCIONES</option>
+                                                <option value="TRANSPORTE">TRANSPORTE</option>
                                                 <option value="AEREO NAVEGACION">AEREO NAVEGACION</option>
                                                 <option value="EMBARCACIONES">EMBARCACIONES</option>
                                                 <option value="VIDA">VIDA</option>
@@ -184,7 +187,7 @@ const Seguros = () => {
                                                 <option value="AUTOMOTOR">AUTOMOTOR</option>
                                                 <option value="ACCIDENTE PERSONALES">ACCIDENTE PERSONALES</option>
                                                 <option value="BICICLETAS">BICICLETAS</option>
-                                                <option value="COMERCIO">COMERCIO</option>
+                                                <option value="COMERCIO">INTEGRAL DE COMERCIO</option>
                                                 <option value="HOGAR">HOGAR</option>
                                             </select>
                                         </div>
