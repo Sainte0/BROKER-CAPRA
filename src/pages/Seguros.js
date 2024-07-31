@@ -68,7 +68,7 @@ const Seguros = () => {
             svg: '🩺'
         },
         {
-            title: 'COMERCIO INTEGRAL',
+            title: 'INTEGRAL DE COMERCIO',
             description: 'Protección para tu negocio. Cubre daños a la propiedad, robos y responsabilidad civil.',
             svg: '🏪'
         },
