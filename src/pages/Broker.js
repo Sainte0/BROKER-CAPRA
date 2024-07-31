@@ -14,7 +14,7 @@ const insuranceCards = [
     { title: 'AUTOMOTOR', description: 'Protección completa para tu vehículo.', svg: '🚗' },
     { title: 'HOGAR', description: 'Seguro integral para tu hogar y pertenencias.', svg: '🏠' },
     { title: 'VIDA', description: 'Asegura el bienestar de tu familia.', svg: '❤️' },
-    { title: 'SALUD', description: 'Cobertura médica para ti y tu familia.', svg: '🩺' },
+    { title: 'ART', description: 'Cobertura riesgo del trabajador.', svg: '👷' },
     { title: 'INTEGRAL DE COMERCIO', description: 'Protección para tu negocio.', svg: '🏪' },
     { title: 'ACCIDENTES PERSONALES', description: 'Cobertura ante accidentes personales.', svg: '⚕️' }
 ];
@@ -54,7 +54,7 @@ const Broker = () => {
                                 <h4 className="card-history-title">VISIÓN</h4>
                                 Apuntamos a ser un aliado estratégico en el crecimiento de nuestros clientes,
                                 brindándoles asesoramiento de excelencia, logrando estar en las primeras opciones de los
-                                consumidores a la hora de pensar en asegurar sus bienes.
+                                consumidores a la hora de pensar en materia de seguros.
                             </div>
                             <div className="card">
                                 <h4 className="card-history-title">VALORES</h4>
