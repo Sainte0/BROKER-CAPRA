@@ -5,14 +5,15 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #f8f9fa; /* Ajusta el color de fondo según sea necesario */
+    background-color: #5c2434; /* Ajusta el color de fondo según sea necesario */
 }
 
-.navbar {
+.navbar {   
     font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center; /* Centra el menú en pantallas grandes */
     width: 100%;
+    background-color: #5c2434 !important;
 }
 
 /* Contenedor del logo */
@@ -25,11 +26,12 @@ header {
     flex: 2;
     display: flex;
     justify-content: center; /* Centra el menú en pantallas grandes */
+    background-color: #5c2434 !important;
 }
 
 /* Estilo para el menú desplegable completo */
 .dropdown-menu {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 0.25rem;
 }
@@ -42,13 +44,13 @@ header {
 
 /* Estilo para el elemento del menú desplegable al pasar el cursor */
 .dropdown-item:hover {
-    background-color: #f8f9fa;
+    background-color: #5c2434;
     color: black;
 }
 
 /* Estilo para los submenús */
 .dropdown-submenu .dropdown-menu {
-    background-color: white;
+    background-color: #5c2434;
     border-left: 1px solid #ddd;
     border-radius: 0.25rem;
 }
@@ -71,7 +73,7 @@ header {
 
 /* Estilo general para el botón del menú desplegable */
 .navbar-toggler {
-    background-color: white;
+    background-color: #5c2434;
     border: 1px solid #ddd;
     border-radius: 0.25rem;
     margin-left: auto; /* Alinea a la derecha en pantallas grandes */
@@ -118,11 +120,11 @@ header {
 }
 
 .navbar-nav .nav-link:hover {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .navbar-nav .dropdown-menu .dropdown-item {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 /* Aumenta el espaciado entre los elementos de navegación */

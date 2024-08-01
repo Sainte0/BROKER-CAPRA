@@ -28,7 +28,7 @@ const Servicios = () => {
                         <p>Realizamos evaluaciones de riesgos para proporcionar las mejores opciones de seguros a nuestros clientes.</p>
                     </div>
                     <div className="service-item">
-                        <h3>Atención al Cliente</h3>
+                        <h3>Atención al Cliente y Posventa</h3>
                         <p>Brindamos servicios de atención al cliente, incluyendo soporte telefónico, vía email y a través de chat en línea.</p>
                     </div>
                     <div className="service-item">

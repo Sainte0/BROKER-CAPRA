@@ -11,14 +11,11 @@ import sergio from '../assets/img/sergio.jpg'
 
 
 const insuranceCards = [
-    { title: 'AUTOMOTOR', description: 'Protección completa para tu vehículo.', svg: '🚗' },
-    { title: 'HOGAR', description: 'Seguro integral para tu hogar y pertenencias.', svg: '🏠' },
-    { title: 'VIDA', description: 'Asegura el bienestar de tu familia.', svg: '❤️' },
-    { title: 'ART', description: 'Cobertura riesgo del trabajador.', svg: '👷' },
-    { title: 'INTEGRAL DE COMERCIO', description: 'Protección para tu negocio.', svg: '🏪' },
-    { title: 'ACCIDENTES PERSONALES', description: 'Cobertura ante accidentes personales.', svg: '⚕️' }
+    { title: 'COBERTURAS PERSONALES', description: 'Protección completa para ti y tu familia.', svg: '👤' },
+    { title: 'COBERTURAS PYMES', description: 'Protección integral para tu empresa.', svg: '🏢' },
+    { title: 'COBERTURAS INDUSTRIALES', description: 'Cobertura completa para grandes industrias.', svg: '🏭' },
+    { title: 'COBERTURAS AGRO', description: 'Protección especializada para el sector agropecuario.', svg: '🌾' }
 ];
-
 
 
 const Broker = () => {

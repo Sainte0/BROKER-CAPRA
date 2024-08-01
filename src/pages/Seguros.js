@@ -45,40 +45,28 @@ const Seguros = () => {
             alert('Failed to send message. Please try again later.');
         });
     };
-
-    const insuranceCards = [
+    const insuranceCategories = [
         {
-            title: 'AUTOMOTOR',
-            description: 'Protección completa para tu vehículo. Incluye cobertura contra accidentes, robos y daños a terceros.',
-            svg: '🚗'
+            title: 'COBERTURAS PERSONALES',
+            description: `- Accidentes Personales\n- Aeronavegación\n- Automotores y Motos\n- Robo\n- Embarcaciones de Placer\n- Hogar\n- Vida`,
+            svg: '👤'
         },
         {
-            title: 'HOGAR',
-            description: 'Seguro integral para tu hogar y pertenencias. Cobertura contra incendios, robos y desastres naturales.',
-            svg: '🏠'
+            title: 'COBERTURAS PYMES',
+            description: `- Accidentes Personales\n- ART\n- Transporte\n- Caución\n- Integral de Comercio\n- Consorcio\n- Todo Riesgo Construcción\n- Seguro Técnico\n- Equipos Electrónicos\n- Flota de Vehículos\n- Incendio\n- Responsabilidad Civil\n- Vida Colectivo`,
+            svg: '🏢'
         },
         {
-            title: 'VIDA',
-            description: 'Asegura el bienestar de tu familia. Proporciona protección financiera en caso de fallecimiento.',
-            svg: '❤️'
+            title: 'COBERTURAS INDUSTRIALES',
+            description: `- ART\n- Caución\n- Todo Riesgo Construcción\n- Equipos Electrónicos\n- Todo Riesgo Operativo\n- Transporte\n- Vida Colectivo`,
+            svg: '🏭'
         },
         {
-            title: 'SALUD',
-            description: 'Cobertura médica para ti y tu familia. Incluye consultas, tratamientos y hospitalización.',
-            svg: '🩺'
-        },
-        {
-            title: 'INTEGRAL DE COMERCIO',
-            description: 'Protección para tu negocio. Cubre daños a la propiedad, robos y responsabilidad civil.',
-            svg: '🏪'
-        },
-        {
-            title: 'ACCIDENTES PERSONALES',
-            description: 'Cobertura ante accidentes personales. Proporciona compensación por lesiones y discapacidad.',
-            svg: '⚕️'
+            title: 'COBERTURAS AGRO',
+            description: `- Granizo\n- Vehículos Agro\n- Accidentes Personales\n- Seguro Agropecuario`,
+            svg: '🌾'
         }
     ];
-
     return (
         <div className="contenedor-main">
             <WhatsAppButton />
@@ -88,27 +76,26 @@ const Seguros = () => {
                     <h2 className="history-title">SEGUROS</h2>
                     <p className='history-subtitle'>Elige el tipo de seguro que mejor se adapte a tus necesidades y envíanos tu mensaje para obtener más información. Ya sea que necesites protección para tu hogar, tu automóvil, o incluso seguros especializados como agro o navegación aérea, estamos aquí para ayudarte a encontrar la mejor opción.</p>
                     <div className='seguros'>
-                        {insuranceCards.map((card, index) => (
-                            <div className='seguros-card' key={index}>
-                                <div className='flip-card'>
-                                    <div className='flip-card-inner'>
-                                        <div className='flip-card-front'>
-                                            <div className='seguros-card-svg'>{card.svg}</div>
-                                            <p className='title'>{card.title}</p>
-                                        </div>
-                                        <div className='flip-card-back'>
-                                            <p className='title'>{card.title}</p>
-                                            <p>{card.description}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+        {insuranceCategories.map((category, index) => (
+            <div className='seguros-card' key={index}>
+                <div className='flip-card'>
+                    <div className='flip-card-inner'>
+                        <div className='flip-card-front'>
+                            <div className='seguros-card-svg'>{category.svg}</div>
+                            <p className='title'>{category.title}</p>
+                        </div>
+                        <div className='flip-card-back'>
+                            <p className='description'>{category.description}</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        ))}
+    </div>
                     <hr />
 
                     <div>
-                    <h2 className='section-title'>Contactanos!</h2>
+                        <h2 className='section-title'>Contactanos!</h2>
                         <div className="form-contact">
                             <form className="mxw-774 form-container" onSubmit={handleSubmit}>
                                 <div className="row">
