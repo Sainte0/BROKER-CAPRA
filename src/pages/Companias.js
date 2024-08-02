@@ -15,6 +15,8 @@ import image11 from '../assets/img/segunda.png';
 import image12 from '../assets/img/galeno.png';
 import image13 from '../assets/img/berkley.png';
 import image14 from '../assets/img/prevencion.png';
+import image15 from '../assets/img/fedpat.png';
+import image16 from '../assets/img/provincia.png'
 import '../pages/css/Companias.css';
 import Sponsor from '../components/Sponsor';
 
@@ -51,7 +53,7 @@ const Companias = () => {
                         </div>
                         <div className="company">
                             <img src={image14} alt="Prevencion" className="company-logo" />
-                            <p>Prevencion ofrece una gama de seguros de vida y salud, enfocándose en la prevención y bienestar de sus clientes.</p>
+                            <p>Prevención es una compañia que se especializa en seguros de accidentes de riesgos del trabajo.</p>
                         </div>
                         <div className="company">
                             <img src={image11} alt="Segunda" className="company-logo" />
@@ -63,7 +65,7 @@ const Companias = () => {
                         </div>
                         <div className="company">
                             <img src={image5} alt="Integrity" className="company-logo" />
-                            <p>Integrity se enfoca en seguros de vida y planes de jubilación, ayudando a las personas a asegurar su futuro financiero con confianza.</p>
+                            <p>Integrity es una compañia que comercializa todas las ramas del seguro, excepto art</p>
                         </div>
                         <div className="company">
                             <img src={image3} alt="Fedpat" className="company-logo" />
@@ -80,6 +82,18 @@ const Companias = () => {
                         <div className="company">
                             <img src={image6} alt="LPS" className="company-logo" />
                             <p>LPS ofrece seguros de responsabilidad civil y comercial, protegiendo a las empresas contra posibles riesgos y eventualidades.</p>
+                        </div>
+                        <div className="company">
+                            <img src={image15} alt="Fedpat" className="company-logo" />
+                            <p>Es una compañia que comercializa todas las ramas de seguros.</p>
+                        </div>
+                        <div className="company">
+                            <img src={image12} alt="Galeno" className="company-logo" />
+                            <p>Galeno es una compañia de seguros especializada en seguros patrimoniales, seguros de vida y ART.</p>
+                        </div>
+                        <div className="company">
+                            <img src={image16} alt="Provincia" className="company-logo" />
+                            <p>Provincia comercializa solamente seguros ART.</p>
                         </div>
                     </div>
 

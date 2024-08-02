@@ -35,18 +35,7 @@ const Servicios = () => {
                         <h3>Gestión de Reclamos</h3>
                         <p>Explicamos el proceso de gestión de reclamos y cómo ayudamos a los clientes a través de este proceso.</p>
                     </div>
-                    <div className="service-item">
-                        <h3>Beneficios de Trabajar con un Broker</h3>
-                        <p>Destacamos los beneficios de trabajar con un broker en lugar de ir directamente a una compañía de seguros.</p>
-                    </div>
-                    <div className="service-item">
-                        <h3>Historias de Éxito</h3>
-                        <p>Compartimos historias de éxito de clientes que han utilizado nuestros servicios y han tenido experiencias positivas.</p>
-                    </div>
-                    <div className="service-item">
-                        <h3>Educación Financiera y de Seguros</h3>
-                        <p>Ofrecemos recursos educativos sobre seguros, incluyendo guías y artículos que expliquen conceptos básicos y avanzados.</p>
-                    </div>
+                    
                 </div>
                 </div>
                 

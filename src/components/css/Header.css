@@ -58,7 +58,7 @@ header {
 /* Flecha del dropdown que indica sub-opciones */
 .dropdown-submenu .dropdown-toggle::after {
     font-size: 0.8rem;
-    color: black;
+    color: rgb(0, 0, 0);
     margin-left: 0.5rem;
 }
 
@@ -98,7 +98,7 @@ header {
 
 /* Color del texto de los enlaces de navegación a negro */
 .navbar-nav .nav-link {
-    color: black;
+    color: rgb(255, 255, 255);
     position: relative;
 }
 
@@ -108,7 +108,7 @@ header {
     display: block;
     width: 0;
     height: 2px;
-    background: #5c2434;
+    background: #ffffff;
     transition: width 0.3s;
     position: absolute;
     bottom: -2px;
@@ -118,6 +118,8 @@ header {
 .navbar-nav .nav-link:hover::after {
     width: 100%;
 }
+
+
 
 .navbar-nav .nav-link:hover {
     color: rgb(255, 255, 255);
