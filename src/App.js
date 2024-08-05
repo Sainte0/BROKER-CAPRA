@@ -9,7 +9,7 @@ import Seguros from './pages/Seguros';
 import Companias from './pages/Companias';
 import Contacto from './pages/Contacto';
 import Politicas from './pages/Politicas';
-import Terminos from './pages/Terminos' // Ensure this component exists
+import Terminos from './pages/Terminos'; // Ensure this component exists
 
 const App = () => {
   return (
