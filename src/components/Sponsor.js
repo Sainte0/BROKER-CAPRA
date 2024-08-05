@@ -12,7 +12,6 @@ import image10 from '../assets/img/sancor.png';
 import image11 from '../assets/img/segunda.png';
 import image12 from '../assets/img/galeno.png';
 import image13 from '../assets/img/berkley.png';
-import image14 from '../assets/img/prevencion.png';
 import './css/Sponsor.css'; // Asegúrate de importar el archivo CSS
 
 const Sponsor = () => {

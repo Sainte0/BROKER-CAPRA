@@ -28,16 +28,6 @@ header {
 
 
 
-/* Estilos generales */
-.background {
-    background: url('../assets/img/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    position: relative;
-}
-
-
 
 .history-section {
     border-radius: 20px;
