@@ -1,14 +1,15 @@
 import React from 'react';
 import WhatsAppButton from '../components/WhatsAppButton'; // Asegúrate de que la ruta sea correcta
-import Breadcrumb from '../components/Breadcrumb';
 import Sponsor from '../components/Sponsor';
 import '../pages/css/Servicios.css';
+import BackgroundCarousel from '../components/BackgroundCarousel';
 
 const Servicios = () => {
     return (
         <div className="contenedor-main">
             <WhatsAppButton />
-            <Breadcrumb />
+            <BackgroundCarousel />
+
             <div className="container">
                 <div className="history-section">
                     <h2 className="history-title">SERVICIOS</h2>

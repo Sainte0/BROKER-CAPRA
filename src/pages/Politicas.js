@@ -1,6 +1,6 @@
 import React from 'react';
 import WhatsAppButton from '../components/WhatsAppButton'; // Asegúrate de que la ruta sea correcta
-import Breadcrumb from '../components/Breadcrumb';
+import BackgroundCarousel from '../components/BackgroundCarousel';
 import Sponsor from '../components/Sponsor';
 import '../pages/css/Politicas.css';
 
@@ -8,7 +8,7 @@ const Politicas = () => {
     return (
         <div className="contenedor-main">
             <WhatsAppButton />
-            <Breadcrumb />
+            <BackgroundCarousel/>
             <div className="container">
                 <div className="history-section">
                     <h2 className="history-title">Políticas y Privacidad</h2>

@@ -1,14 +1,14 @@
 import React from 'react';
 import WhatsAppButton from '../components/WhatsAppButton'; // Asegúrate de que la ruta sea correcta
-import Breadcrumb from '../components/Breadcrumb';
 import Sponsor from '../components/Sponsor';
+import BackgroundCarousel from '../components/BackgroundCarousel';
 import '../pages/css/Terminos.css';
 
 const Terminos = () => {
     return (
         <div className="contenedor-main">
             <WhatsAppButton />
-            <Breadcrumb />
+            <BackgroundCarousel />
             <div className="container">
                 <div className="history-section">
                     <h2 className="history-title">Términos y Condiciones</h2>

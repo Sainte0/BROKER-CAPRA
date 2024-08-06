@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import WhatsAppButton from '../components/WhatsAppButton';
-import Breadcrumb from '../components/Breadcrumb';
+import BackgroundCarousel from '../components/BackgroundCarousel';
 import Sponsor from '../components/Sponsor';
 import '../pages/css/Contacto.css';
 
@@ -48,7 +48,7 @@ const Contacto = () => {
     return (
         <div className="contenedor-main">
             <WhatsAppButton />
-            <Breadcrumb />
+            <BackgroundCarousel/>
             <div className="container">
                 <div className="history-section">
                     <h2 className="history-title">CONTACTO</h2>

@@ -1,6 +1,6 @@
 import React from 'react';
 import WhatsAppButton from '../components/WhatsAppButton';
-import Breadcrumb from '../components/Breadcrumb';
+import BackgroundCarousel from '../components/BackgroundCarousel';
 import image1 from '../assets/img/allianz.png';
 import image2 from '../assets/img/cristobal.png';
 import image3 from '../assets/img/fedpat.png';
@@ -24,7 +24,7 @@ const Companias = () => {
     return (
         <div className="contenedor-main">
             <WhatsAppButton />
-            <Breadcrumb />
+            <BackgroundCarousel/>
             <div className="container">
                 <div className="history-section">
                     <h2 className="history-title">COMPAÑÍAS</h2>

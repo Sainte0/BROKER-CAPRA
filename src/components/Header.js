@@ -22,7 +22,9 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="logo-container">
-          <img src={logo} alt="logo" width="200" height="100" className="logo-header" />
+        <Link to="/">
+          <img src={logo} alt="logo" width="200" height="100" className="logo-header"  />
+          </Link>
         </div>
 
         <div className="nav-container">
