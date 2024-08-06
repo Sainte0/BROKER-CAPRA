@@ -98,7 +98,7 @@ const Broker = () => {
                         <div className="card">
                             <div className="card-info">
                                 <div className="card-avatar" style={{ backgroundImage: `url(${ignacio})` }}></div>
-                                <div className="card-title">INGACIO CAPRA</div>
+                                <div className="card-title">IGNACIO CAPRA</div>
                                 <div className="card-subtitle">SENIOR PARTNER</div>
                             </div>
                             <ul className="card-social">
